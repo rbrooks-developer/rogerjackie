@@ -1,0 +1,7 @@
+Place your slideshow.mp4 file in this directory.
+
+Expected file path: public/videos/slideshow.mp4
+
+The video is referenced in:
+  - src/components/Hero.jsx   (full-screen background, autoplays muted on loop)
+  - src/components/Showcase.jsx (featured player with controls)

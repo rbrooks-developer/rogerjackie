@@ -1,0 +1,47 @@
+.cta-section {
+  padding-bottom: 0;
+}
+
+.cta-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 96px 48px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+}
+
+.cta-card__glow {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-card__title {
+  margin: 0 auto 0;
+  max-width: 600px;
+}
+
+.cta-card__subtitle {
+  margin: 16px auto 40px;
+  max-width: 500px;
+}
+
+.cta-card__actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .cta-card {
+    padding: 64px 24px;
+  }
+}
