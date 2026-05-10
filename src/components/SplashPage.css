@@ -1,0 +1,86 @@
+.splash {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.splash::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.splash-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.splash-message {
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  font-weight: 300;
+  color: var(--color-light);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  animation: fadeUp 1.4s ease forwards 0.3s;
+}
+
+.splash-signature {
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: 400;
+  color: var(--color-muted);
+  font-style: italic;
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards 1.2s;
+}
+
+.splash-btn {
+  margin-top: 0.5rem;
+  padding: 0.85rem 2.4rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 28px var(--color-accent-glow);
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 2s;
+}
+
+.splash-btn:hover {
+  background: var(--color-accent-hover);
+  box-shadow: 0 0 44px var(--color-accent-glow);
+  transform: translateY(-2px);
+}
+
+.splash-btn:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
